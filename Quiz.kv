@@ -1,6 +1,6 @@
 ScreenManagement : 
     HomePage :
-    Q1 :
+    q1 :
 
 <HomePage>  :                   # this is the class which will contain all the widgets of the app. 
     name : 'Quiz'
@@ -10,35 +10,95 @@ ScreenManagement :
             source : 'modern_fam.jpg'
     
     Button :
-        on_release : app.root.current = 'q1'   # tells the button which page to go to upon being pressed. 
-        size_hint :0.75, 0.75                        # this determines the size of the button wrt to the size of the screen.
+        on_release : app.root.current = 'q1'         # tells the button which page to go to upon being pressed. 
+        size_hint : 0.75, 0.75                        # this determines the size of the button wrt to the size of the screen.
         pos_hint : {'x' : 0.15, 'y' : 0.25}          # this determines the position of the button on the screen, default = bottom-left
         background_normal : 'button.png'
 
-<Q1> :
+
+<q1>
     name : 'q1'
     
     GridLayout :
-        cols : 1
+        cols : 2
         size : root.width, root.height
+
         Label :
-            text : 'What is your favorite color ?'
+            text : "What is your favorite color?"
+            font_size : 30
+        
+        Label :
+            text : 'Blank'
+        
+        Label :
+            text : "Blue"
+            font_size : 30
+
+        CheckBox:
+            group : "Color"
+            on_active : root.optionClicked(self, self.active, 'A')
+        
+        Label :
+            text : "Green"
+            font_size : 30
+
+        CheckBox:
+            group : "Color"
+            on_active : root.optionClicked(self, self.active, 'Cam')
+        
+        Label :
+            text : "Red"
+            font_size : 30
+
+        CheckBox:
+            group : "Color"
+            on_active : root.optionClicked(self, self.active, 'G')
+        
+        Label :
+            text : "Yellow"
+            font_size : 30
+
+        CheckBox:
+            group : "Color"
+            on_active : root.optionClicked(self, self.active, 'M')
+        
+        Label :
+            text : "Grey"
+            font_size : 30
+
+        CheckBox:
+            group : "Color"
+            on_active : root.optionClicked(self, self.active, 'Cl')
+        
+        Label :
+            text : "White"
+            font_size : 30
+
+        CheckBox:
+            group : "Color"
+            on_active : root.optionClicked(self, self.active, 'P')
+        
+        
+        
+            
+
+            
+
+            
+            
 
 
-        GridLayout :             # kivy places the following widgets in top-bottom and left-right order. We can change it later. 
-            cols : 2
-            Button :
-                text : 'Blue'
-                on_release : app.blueButton()       
-            
-            Button :
-                text : 'Green'
-                on_release : app.greenButton()
-            
-            Button :
-                text : 'Yellow'
-                on_release : app.yellowButton()
-            
-            Button :
-                text : 'Red'
-                on_release : app.redButton()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
