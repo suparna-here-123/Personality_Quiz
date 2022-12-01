@@ -23,7 +23,7 @@ from kivy.config import Config
 Claire = 0              # initialising all character's votes to 0 before the start. 
 Phil = 0
 Alex = 0
-Gloria = 0
+Gloria = 0 
 Manny = 0
 Cam = 0
 
@@ -35,25 +35,28 @@ class q1 (Screen) :
     def optionClicked(self, instance, value, option) :
         global Claire, Phil, Alex, Gloria, Manny, Cam
 
-
         if option == 'A' :
             Alex += 1
-        
+
         elif option == 'Cam' :
             Cam += 1
         
-        elif option == 'G' :
+        elif option == 'G':
             Gloria += 1
-        
-        elif option == 'M' :
-            Manny += 1
+            
         
         elif option == 'Cl' :
             Claire += 1
+            
+
+        elif option == 'M' :
+            Manny += 1
         
-        elif option == "P" :
-           Phil += 1
+        elif option == 'P' :
+            Phil += 1
+   
         
+        print ('q1) After options')
         print ('Alex', Alex)
         print ('Claire', Claire)
         print ('phil', Phil)
@@ -66,6 +69,39 @@ class q2(Screen) :
     def optionClicked(self, instance, value, option) :
         global Claire, Phil, Alex, Gloria, Manny, Cam
 
+        if option == 'A' :
+            Alex += 1
+   
+        elif option == 'Cam' :
+            Cam += 1
+        
+        elif option == 'G' :
+            Gloria += 1
+        
+        elif option == 'Cl' :
+            Claire += 1
+        
+        elif option == 'M' :
+            Manny += 1
+        
+        elif option == 'P' :
+            Phil += 1
+        
+        print ('q2) After options')
+        print ("__________________")
+        print ('Alex', Alex)
+        print ('Claire', Claire)
+        print ('phil', Phil)
+        print ('Gloria', Gloria)
+        print ('Manny', Manny)
+        print ('cam', Cam)
+        print ("_______________________")
+
+
+class q3(Screen) :
+    def optionClicked(self, instance, value, option) :
+        global Claire, Phil, Alex, Gloria, Manny, Cam
+
 
         if option == 'A' :
             Alex += 1
@@ -94,6 +130,8 @@ class q2(Screen) :
         print ("_______________________")
 
 
+
+
 class ScreenManagement(ScreenManager) : 
     pass
 
@@ -102,6 +140,15 @@ file = Builder.load_file('Quiz.kv');
 class QuizApp(App) :                    
     def build (self) :
         return file
-
-
 QuizApp().run()
+
+
+
+
+
+
+
+
+
+
+
