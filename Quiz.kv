@@ -1,8 +1,10 @@
+#: import p poll_values
 ScreenManagement : 
     HomePage :
     q1 :
     q2 : 
     q3 : 
+    calculating :
 
 <HomePage>  :                   # this is the class which will contain all the widgets of the app. 
     name : 'Quiz'
@@ -234,7 +236,8 @@ ScreenManagement :
 
         CheckBox:
             group : "Color"
-            on_active : root.optionClicked(self, self.active, 'A')
+            on_release : root.optionClicked(self, self.active, 'A')
+            on_release : app.root.current = 'calculating'
         
         Label :
             text : "Farm"
@@ -242,7 +245,8 @@ ScreenManagement :
 
         CheckBox:
             group : "Color"
-            on_active : root.optionClicked(self, self.active, 'Cam')
+            on_release : root.optionClicked(self, self.active, 'Cam')
+            on_release : app.root.current = 'calculating'
         
         Label :
             text : "Beach"
@@ -250,7 +254,8 @@ ScreenManagement :
 
         CheckBox:
             group : "Color"
-            on_active : root.optionClicked(self, self.active, 'G')
+            on_release : root.optionClicked(self, self.active, 'G')
+            on_release : app.root.current = 'calculating'
         
         Label :
             text : "Restaurant"
@@ -258,7 +263,8 @@ ScreenManagement :
 
         CheckBox:
             group : "Color"
-            on_active : root.optionClicked(self, self.active, 'M')
+            on_release : root.optionClicked(self, self.active, 'M')
+            on_release : app.root.current = 'calculating'
         
         Label :
             text : "Resort"
@@ -266,7 +272,8 @@ ScreenManagement :
 
         CheckBox:
             group : "Color"
-            on_active : root.optionClicked(self, self.active, 'Cl')
+            on_release : root.optionClicked(self, self.active, 'Cl')
+            on_release : app.root.current = 'calculating'
         
         Label :
             text : "Golf Course"
@@ -274,12 +281,34 @@ ScreenManagement :
 
         CheckBox:
             group : "Color"
-            on_active : root.optionClicked(self, self.active, 'P')   
+            on_release : root.optionClicked(self, self.active, 'P')   
+            on_release : app.root.current = 'calculating'
+
+
+<calculating>
+    name : 'calculating'
+    
+    GridLayout :
+        cols : 1
+        size : root.width, root.height
+
+        Button :
+            text : 'Which character am I?'
+            height : 10
+            width : 30
+            on_release  : root.result()
+
+
+
+        
+
+
+
+ 
+
 
             
 
-            
-            
 
 
 

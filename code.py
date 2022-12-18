@@ -18,130 +18,134 @@ from kivy.uix.checkbox import CheckBox
 from kivy.uix.gridlayout import GridLayout
 from kivy.lang import Builder
 from kivy.config import Config
+from numpy import char, character
+from poll_values import *
 
 
-Claire = 0              # initialising all character's votes to 0 before the start. 
-Phil = 0
-Alex = 0
-Gloria = 0 
-Manny = 0
-Cam = 0
-
-
+# HAVE TO UPDATE THE VALUE OF d THAT IS BEING CHANGED HERE IN THE POLL_VALUES FILE. 
 class HomePage(Screen) :
     pass
 
 class q1 (Screen) :
     def optionClicked(self, instance, value, option) :
-        global Claire, Phil, Alex, Gloria, Manny, Cam
+        global d
 
         if option == 'A' :
-            Alex += 1
+            d['Alex']+= 1
 
         elif option == 'Cam' :
-            Cam += 1
+            d['Cam'] += 1
         
         elif option == 'G':
-            Gloria += 1
+            d['Gloria'] += 1
             
         
         elif option == 'Cl' :
-            Claire += 1
+            d['Claire'] += 1
             
 
         elif option == 'M' :
-            Manny += 1
+            d['Manny'] += 1
         
         elif option == 'P' :
-            Phil += 1
-   
+            d['Phil'] += 1
         
-        print ('q1) After options')
-        print ('Alex', Alex)
-        print ('Claire', Claire)
-        print ('phil', Phil)
-        print ('Gloria', Gloria)
-        print ('Manny', Manny)
-        print ('cam', Cam)
-        print ("_______________________")
+        with open('poll_values.py', 'r+') as f :
+            lines = f.read().split('\n')
+            lines[0] = 'd = ' + str(d)
+
+            f.seek(0)
+
+            f.writelines('\n'.join(lines))
+
+
 
 class q2(Screen) :
     def optionClicked(self, instance, value, option) :
-        global Claire, Phil, Alex, Gloria, Manny, Cam
+        global d
 
         if option == 'A' :
-            Alex += 1
-   
+            d['Alex']+= 1
+
         elif option == 'Cam' :
-            Cam += 1
+            d['Cam'] += 1
         
-        elif option == 'G' :
-            Gloria += 1
+        elif option == 'G':
+            d['Gloria'] += 1
+            
         
         elif option == 'Cl' :
-            Claire += 1
-        
+            d['Claire'] += 1
+            
+
         elif option == 'M' :
-            Manny += 1
+            d['Manny'] += 1
         
         elif option == 'P' :
-            Phil += 1
+            d['Phil'] += 1
         
-        print ('q2) After options')
-        print ("__________________")
-        print ('Alex', Alex)
-        print ('Claire', Claire)
-        print ('phil', Phil)
-        print ('Gloria', Gloria)
-        print ('Manny', Manny)
-        print ('cam', Cam)
-        print ("_______________________")
+        with open('poll_values.py', 'r+') as f :
+            lines = f.read().split('\n')
+            lines[0] = 'd = ' + str(d)
+
+            f.seek(0)
+
+            f.writelines('\n'.join(lines))
+
+
 
 
 class q3(Screen) :
     def optionClicked(self, instance, value, option) :
-        global Claire, Phil, Alex, Gloria, Manny, Cam
-
+        global d
 
         if option == 'A' :
-            Alex += 1
-        
+            d['Alex']+= 1
+
         elif option == 'Cam' :
-            Cam += 1
+            d['Cam'] += 1
         
-        elif option == 'G' :
-            Gloria += 1
-        
-        elif option == 'M' :
-            Manny += 1
+        elif option == 'G':
+            d['Gloria'] += 1
+            
         
         elif option == 'Cl' :
-            Claire += 1
+            d['Claire'] += 1
+            
+
+        elif option == 'M' :
+            d['Manny'] += 1
         
-        elif option == "P" :
-           Phil += 1
+        elif option == 'P' :
+            d['Phil'] += 1
         
-        print ('Alex', Alex)
-        print ('Claire', Claire)
-        print ('phil', Phil)
-        print ('Gloria', Gloria)
-        print ('Manny', Manny)
-        print ('cam', Cam)
-        print ("_______________________")
+        with open('poll_values.py', 'r+') as f :
+            lines = f.read().split('\n')
+            lines[0] = 'd = ' + str(d)
 
+            f.seek(0)
 
+            f.writelines('\n'.join(lines))
 
+class calculating(Screen) :                 # this part is calculating the character with the highest poll value. 
+    def result(self) :
+        print ('you are the character', find())
 
 class ScreenManagement(ScreenManager) : 
-    pass
+    pass   
 
-file = Builder.load_file('Quiz.kv');     
-
-class QuizApp(App) :                    
+class QuizApp(App) : 
     def build (self) :
-        return file
-QuizApp().run()
-
+        self.load_kv('Quiz.kv')
+        
+        
+if __name__ == '__main__' :
+    QuizApp().run()
+    with open('poll_values.py', 'r+') as f :
+        lines = f.read().split('\n')
+        lines[0] = "d = {'Phil': 0, 'Alex': 0, 'Gloria': 0, 'Manny': 0, 'Cam': 0, 'Claire': 0}"
+        f.seek(0)
+        f.writelines('\n'.join(lines))
 
 
 
