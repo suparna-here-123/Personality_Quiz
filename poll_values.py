@@ -6,5 +6,5 @@ def find() :
         if d[char] == highest_poll :
             value = char
             break
-    
+        
     return value

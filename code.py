@@ -11,11 +11,15 @@ The Builder is responsible for creating a Parser for
 '''
 
 
+from cgitb import text
+from typing import final
+from unicodedata import name
 import kivy
 from kivy.app import App                
 from kivy.uix.screenmanager import Screen, ScreenManager
 from kivy.uix.checkbox import CheckBox
 from kivy.uix.gridlayout import GridLayout
+from kivy.uix.label import Label
 from kivy.lang import Builder
 from kivy.config import Config
 from numpy import char, character
@@ -129,10 +133,22 @@ class q3(Screen) :
 
 class calculating(Screen) :                 # this part is calculating the character with the highest poll value. 
     def result(self) :
-        print ('you are the character', find())
+        print ('you are' + find())
+'''
+        class finalPage(App) :
+            def build(self) :
+                self.window = GridLayout()
+                self.window.add_widget(Label = text("you are" + find()))
+                return self.window
+            
+        
+        finalPage().run()
+'''
+        
 
 class ScreenManagement(ScreenManager) : 
-    pass   
+    pass  
+
 
 class QuizApp(App) : 
     def build (self) :
