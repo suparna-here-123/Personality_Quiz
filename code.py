@@ -96,9 +96,6 @@ class q2(Screen) :
 
             f.writelines('\n'.join(lines))
 
-
-
-
 class q3(Screen) :
     def optionClicked(self, instance, value, option) :
         global d
@@ -131,6 +128,101 @@ class q3(Screen) :
 
             f.writelines('\n'.join(lines))
 
+class q4(Screen) :
+    def optionClicked(self, instance, value, option) :
+        global d
+
+        if option == 'A' :
+            d['Alex']+= 1
+
+        elif option == 'Cam' :
+            d['Cam'] += 1
+        
+        elif option == 'G':
+            d['Gloria'] += 1
+            
+        
+        elif option == 'Cl' :
+            d['Claire'] += 1
+            
+
+        elif option == 'M' :
+            d['Manny'] += 1
+        
+        elif option == 'P' :
+            d['Phil'] += 1
+        
+        with open('poll_values.py', 'r+') as f :
+            lines = f.read().split('\n')
+            lines[0] = 'd = ' + str(d)
+
+            f.seek(0)
+
+            f.writelines('\n'.join(lines))
+
+class q5 (Screen) :
+    def optionClicked(self, instance, value, option) :
+        global d
+
+        if option == 'A' :
+            d['Alex']+= 1
+
+        elif option == 'Cam' :
+            d['Cam'] += 1
+        
+        elif option == 'G':
+            d['Gloria'] += 1
+            
+        
+        elif option == 'Cl' :
+            d['Claire'] += 1
+            
+
+        elif option == 'M' :
+            d['Manny'] += 1
+        
+        elif option == 'P' :
+            d['Phil'] += 1
+        
+        with open('poll_values.py', 'r+') as f :
+            lines = f.read().split('\n')
+            lines[0] = 'd = ' + str(d)
+
+            f.seek(0)
+
+            f.writelines('\n'.join(lines))
+
+class q6 (Screen) :
+    def optionClicked(self, instance, value, option) :
+        global d
+
+        if option == 'A' :
+            d['Alex']+= 1
+
+        elif option == 'Cam' :
+            d['Cam'] += 1
+        
+        elif option == 'G':
+            d['Gloria'] += 1
+            
+        
+        elif option == 'Cl' :
+            d['Claire'] += 1
+            
+
+        elif option == 'M' :
+            d['Manny'] += 1
+        
+        elif option == 'P' :
+            d['Phil'] += 1
+        
+        with open('poll_values.py', 'r+') as f :
+            lines = f.read().split('\n')
+            lines[0] = 'd = ' + str(d)
+
+            f.seek(0)
+
+            f.writelines('\n'.join(lines))
 class calculating(Screen) :                 # this part is calculating the character with the highest poll value. 
     def result(self) :
         print ('you are' + find())
