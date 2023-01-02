@@ -1,4 +1,4 @@
-d = {'Phil': 0, 'Alex': 0, 'Gloria': 0, 'Manny': 0, 'Cam': 0, 'Claire': 0}
+d = {'Alex': 2, 'Cam': 5, 'Claire': 5, 'Gloria': 7, 'Manny': 2, 'Phil': 9}
 
 def find() :
     highest_poll = max(d.values())
@@ -8,5 +8,9 @@ def find() :
             break
         
     return value
+
+
+
+
 
 

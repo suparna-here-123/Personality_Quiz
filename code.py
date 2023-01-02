@@ -62,8 +62,6 @@ class q1 (Screen) :
 
             f.writelines('\n'.join(lines))
 
-
-
 class q2(Screen) :
     def optionClicked(self, instance, value, option) :
         global d
@@ -223,19 +221,157 @@ class q6 (Screen) :
             f.seek(0)
 
             f.writelines('\n'.join(lines))
-class calculating(Screen) :                 # this part is calculating the character with the highest poll value. 
-    def result(self) :
-        print ('you are' + find())
-'''
-        class finalPage(App) :
-            def build(self) :
-                self.window = GridLayout()
-                self.window.add_widget(Label = text("you are" + find()))
-                return self.window
+
+class q7 (Screen) :
+    def optionClicked(self, instance, value, option) :
+        global d
+
+        if option == 'A' :
+            d['Alex']+= 1
+
+        elif option == 'Cam' :
+            d['Cam'] += 1
+        
+        elif option == 'G':
+            d['Gloria'] += 1
             
         
-        finalPage().run()
-'''
+        elif option == 'Cl' :
+            d['Claire'] += 1
+            
+
+        elif option == 'M' :
+            d['Manny'] += 1
+        
+        elif option == 'P' :
+            d['Phil'] += 1
+        
+        with open('poll_values.py', 'r+') as f :
+            lines = f.read().split('\n')
+            lines[0] = 'd = ' + str(d)
+
+            f.seek(0)
+
+            f.writelines('\n'.join(lines))
+
+class q8 (Screen) :
+    def optionClicked(self, instance, value, option) :
+        global d
+
+        if option == 'A' :
+            d['Alex']+= 1
+
+        elif option == 'Cam' :
+            d['Cam'] += 1
+        
+        elif option == 'G':
+            d['Gloria'] += 1
+            
+        
+        elif option == 'Cl' :
+            d['Claire'] += 1
+            
+
+        elif option == 'M' :
+            d['Manny'] += 1
+        
+        elif option == 'P' :
+            d['Phil'] += 1
+        
+        with open('poll_values.py', 'r+') as f :
+            lines = f.read().split('\n')
+            lines[0] = 'd = ' + str(d)
+
+            f.seek(0)
+
+            f.writelines('\n'.join(lines))
+
+class q9 (Screen) :
+    def optionClicked(self, instance, value, option) :
+        global d
+
+        if option == 'A' :
+            d['Alex']+= 1
+
+        elif option == 'Cam' :
+            d['Cam'] += 1
+        
+        elif option == 'G':
+            d['Gloria'] += 1
+            
+        
+        elif option == 'Cl' :
+            d['Claire'] += 1
+            
+
+        elif option == 'M' :
+            d['Manny'] += 1
+        
+        elif option == 'P' :
+            d['Phil'] += 1
+        
+        with open('poll_values.py', 'r+') as f :
+            lines = f.read().split('\n')
+            lines[0] = 'd = ' + str(d)
+
+            f.seek(0)
+
+            f.writelines('\n'.join(lines))
+
+class q10 (Screen) :
+    def optionClicked(self, instance, value, option) :
+        global d
+
+        if option == 'A' :
+            d['Alex']+= 1
+
+        elif option == 'Cam' :
+            d['Cam'] += 1
+        
+        elif option == 'G':
+            d['Gloria'] += 1
+            
+        
+        elif option == 'Cl' :
+            d['Claire'] += 1
+            
+
+        elif option == 'M' :
+            d['Manny'] += 1
+        
+        elif option == 'P' :
+            d['Phil'] += 1
+        
+        with open('poll_values.py', 'r+') as f :
+            lines = f.read().split('\n')
+            lines[0] = 'd = ' + str(d)
+
+            f.seek(0)
+
+            f.writelines('\n'.join(lines))
+
+class calculating(Screen) :                 # this part is calculating the character with the highest poll value. 
+    def result(self) :
+        character = find()
+        print ('you are ' + character)
+
+        if character == 'Alex' :
+            print ('You are a very smart and self-sufficient person!')
+        
+        elif character == 'Cam' :
+            print ("You are very generous and have a flair for drama!")
+        
+        elif character == "Claire" : 
+            print ("You are a go-getter and a perfectionist!")
+        
+        elif character == 'Gloria' :
+            print('You place family above all else!')
+        
+        elif character == 'Phil' :
+            print ("Creative inventions are your forte!")
+        
+        else :
+            print ("You are very mature and intuitive for your age!")
         
 
 class ScreenManagement(ScreenManager) : 

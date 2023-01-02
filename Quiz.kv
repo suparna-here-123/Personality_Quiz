@@ -6,6 +6,10 @@ ScreenManagement :
     q4 :
     q5 : 
     q6 :
+    q7 :
+    q8 :
+    q9 :
+    q10 :
     calculating :
 
 <HomePage>  :                   # this is the class which will contain all the widgets of the app. 
@@ -160,8 +164,7 @@ ScreenManagement :
             group : "Color"
             on_release : root.optionClicked(self, self.active, 'P')
             on_release : app.root.current = 'q2'
-            color : 0,0,0,1
-        
+            color : 0,0,0,1   
 <q2>
     name : 'q2'
     canvas.before :
@@ -276,8 +279,6 @@ ScreenManagement :
                     source: 'sandwich.jpg'
                     size: sp(70), sp(70)
                     pos: int(self.center_x - sp(11)), int(self.center_y - sp(11))
-
-
 <q3>
     name : 'q3'
     canvas.before :
@@ -388,8 +389,6 @@ ScreenManagement :
                     source: 'golf.jpg'
                     size: sp(70), sp(70)
                     pos: int(self.center_x - sp(11)), int(self.center_y - sp(11))
-
-
 <q4>
     name : 'q4'
     canvas.before :
@@ -421,7 +420,7 @@ ScreenManagement :
             on_release : app.root.current = 'q5'
             canvas.before:
                 Rectangle:
-                    source: 'museum.jpg'
+                    source: 'smart.jpg'
                     size: sp(70), sp(70)
                     pos: int(self.center_x - sp(11)), int(self.center_y - sp(11))
 
@@ -437,7 +436,7 @@ ScreenManagement :
             on_release : app.root.current = 'q5'
             canvas.before:
                 Rectangle:
-                    source: 'farm.jpg'
+                    source: 'funny.jpg'
                     size: sp(70), sp(70)
                     pos: int(self.center_x - sp(11)), int(self.center_y - sp(11))
 
@@ -452,7 +451,7 @@ ScreenManagement :
             on_release : app.root.current = 'q5'
             canvas.before:
                 Rectangle:
-                    source: 'beach.jpg'
+                    source: 'sophisticated.jpg'
                     size: sp(70), sp(70)
                     pos: int(self.center_x - sp(11)), int(self.center_y - sp(11))
 
@@ -467,7 +466,7 @@ ScreenManagement :
             on_release : app.root.current = 'q5'
             canvas.before:
                 Rectangle:
-                    source: 'restaurant.jpg'
+                    source: 'gradcap.jpg'
                     size: sp(70), sp(70)
                     pos: int(self.center_x - sp(11)), int(self.center_y - sp(11))
 
@@ -482,7 +481,7 @@ ScreenManagement :
             on_release : app.root.current = 'q5'
             canvas.before:
                 Rectangle:
-                    source: 'resort.jpg'
+                    source: 'overthinker.jpg'
                     size: sp(70), sp(70)
                     pos: int(self.center_x - sp(11)), int(self.center_y - sp(11))
 
@@ -497,7 +496,7 @@ ScreenManagement :
             on_release : app.root.current = 'q5'
             canvas.before:
                 Rectangle:
-                    source: 'golf.jpg'
+                    source: 'jovial.jpg'
                     size: sp(70), sp(70)
                     pos: int(self.center_x - sp(11)), int(self.center_y - sp(11))
 <q5>
@@ -531,7 +530,7 @@ ScreenManagement :
             on_release : app.root.current = 'q6'
             canvas.before:
                 Rectangle:
-                    source: 'museum.jpg'
+                    source: 'book.jpg'
                     size: sp(70), sp(70)
                     pos: int(self.center_x - sp(11)), int(self.center_y - sp(11))
 
@@ -547,7 +546,7 @@ ScreenManagement :
             on_release : app.root.current = 'q6'
             canvas.before:
                 Rectangle:
-                    source: 'farm.jpg'
+                    source: 'friends.jpg'
                     size: sp(70), sp(70)
                     pos: int(self.center_x - sp(11)), int(self.center_y - sp(11))
 
@@ -562,7 +561,7 @@ ScreenManagement :
             on_release : app.root.current = 'q6'
             canvas.before:
                 Rectangle:
-                    source: 'beach.jpg'
+                    source: 'spa.jpg'
                     size: sp(70), sp(70)
                     pos: int(self.center_x - sp(11)), int(self.center_y - sp(11))
 
@@ -577,7 +576,7 @@ ScreenManagement :
             on_release : app.root.current = 'q6'
             canvas.before:
                 Rectangle:
-                    source: 'restaurant.jpg'
+                    source: 'movie.jpg'
                     size: sp(70), sp(70)
                     pos: int(self.center_x - sp(11)), int(self.center_y - sp(11))
 
@@ -592,7 +591,7 @@ ScreenManagement :
             on_release : app.root.current = 'q6'
             canvas.before:
                 Rectangle:
-                    source: 'resort.jpg'
+                    source: 'exercise.jpg'
                     size: sp(70), sp(70)
                     pos: int(self.center_x - sp(11)), int(self.center_y - sp(11))
 
@@ -607,7 +606,7 @@ ScreenManagement :
             on_release : app.root.current = 'q6'
             canvas.before:
                 Rectangle:
-                    source: 'golf.jpg'
+                    source: 'experiment.jpg'
                     size: sp(70), sp(70)
                     pos: int(self.center_x - sp(11)), int(self.center_y - sp(11))
 <q6>
@@ -639,10 +638,10 @@ ScreenManagement :
         CheckBox:
             group : "Color"
             on_release : root.optionClicked(self, self.active, 'A')
-            on_release : app.root.current = 'q3'
+            on_release : app.root.current = 'q7'
             canvas.before:
                 Rectangle:
-                    source: 'pasta.jpg'
+                    source: 'scientist.jpg'
                     size: sp(60), sp(60)
                     pos: int(self.center_x - sp(11)), int(self.center_y - sp(11))
         
@@ -654,10 +653,10 @@ ScreenManagement :
         CheckBox:
             group : "Color"
             on_release : root.optionClicked(self, self.active, 'Cam')
-            on_release : app.root.current = 'q3'
+            on_release : app.root.current = 'q7'
             canvas.before:
                 Rectangle:
-                    source: 'burger.jpg'
+                    source: 'clown.jpg'
                     size: sp(60), sp(60)
                     pos: int(self.center_x - sp(11)), int(self.center_y - sp(11))
             
@@ -671,10 +670,10 @@ ScreenManagement :
         CheckBox:
             group : "Color"
             on_release : root.optionClicked(self, self.active, 'G')
-            on_release : app.root.current = 'q3'
+            on_release : app.root.current = 'q7'
             canvas.before:
                 Rectangle:
-                    source: 'salad.jpg'
+                    source: 'instructor.jpg'
                     size: sp(60), sp(60)
                     pos: int(self.center_x - sp(11)), int(self.center_y - sp(11))
         
@@ -686,10 +685,10 @@ ScreenManagement :
         CheckBox:
             group : "Color"
             on_release : root.optionClicked(self, self.active, 'M')
-            on_release : app.root.current = 'q3'
+            on_release : app.root.current = 'q7'
             canvas.before:
                 Rectangle:
-                    source: 'enchiladas.jpg'
+                    source: 'lawyer.jpg'
                     size: sp(60), sp(60)
                     pos: int(self.center_x - sp(11)), int(self.center_y - sp(11))
         
@@ -701,10 +700,10 @@ ScreenManagement :
         CheckBox:
             group : "Color"
             on_release : root.optionClicked(self, self.active, 'Cl')
-            on_release : app.root.current = 'q3'
+            on_release : app.root.current = 'q7'
             canvas.before:
                 Rectangle:
-                    source: 'cupcake.jpg'
+                    source: 'communityworker.jpg'
                     size: sp(60), sp(60)
                     pos: int(self.center_x - sp(11)), int(self.center_y - sp(11))
               
@@ -718,10 +717,439 @@ ScreenManagement :
         CheckBox:
             group : "Color"
             on_release : root.optionClicked(self, self.active, 'P')
-            on_release : app.root.current = 'q3'  
+            on_release : app.root.current = 'q7'  
             canvas.before:
                 Rectangle:
-                    source: 'sandwich.jpg'
+                    source: 'comedian.jpg'
+                    size: sp(70), sp(70)
+                    pos: int(self.center_x - sp(11)), int(self.center_y - sp(11))
+<q7>
+    name : 'q7'
+    canvas.before :
+        Rectangle :
+            size : self.size
+        Color :
+            rgba : 0,255,255,0.2
+    
+    GridLayout :
+        cols : 2
+        size : root.width, root.height
+
+        Label :
+            text : "   What is your favorite pet?"
+            font_size : 30
+            color : 0,0,0,1
+        
+        Label :
+            text : ' '
+        
+        Label :
+            text : "None"
+            font_size : 30
+            color : 0,0,0,1
+        
+                    
+        CheckBox:
+            group : "Color"
+            on_release : root.optionClicked(self, self.active, 'A')
+            on_release : app.root.current = 'q8'
+            canvas.before:
+                Rectangle:
+                    source: 'none.jpg'
+                    size: sp(60), sp(60)
+                    pos: int(self.center_x - sp(11)), int(self.center_y - sp(11))
+        
+        Label :
+            text : "Panda"
+            font_size : 30
+            color : 0,0,0,1
+
+        CheckBox:
+            group : "Color"
+            on_release : root.optionClicked(self, self.active, 'Cam')
+            on_release : app.root.current = 'q8'
+            canvas.before:
+                Rectangle:
+                    source: 'panda.jpg'
+                    size: sp(60), sp(60)
+                    pos: int(self.center_x - sp(11)), int(self.center_y - sp(11))
+            
+
+        
+        Label :
+            text : "Horse"
+            font_size : 30
+            color : 0,0,0,1
+
+        CheckBox:
+            group : "Color"
+            on_release : root.optionClicked(self, self.active, 'G')
+            on_release : app.root.current = 'q8'
+            canvas.before:
+                Rectangle:
+                    source: 'horse.jpg'
+                    size: sp(60), sp(60)
+                    pos: int(self.center_x - sp(11)), int(self.center_y - sp(11))
+        
+        Label :
+            text : "Hamster"
+            font_size : 30
+            color : 0,0,0,1
+
+        CheckBox:
+            group : "Color"
+            on_release : root.optionClicked(self, self.active, 'M')
+            on_release : app.root.current = 'q8'
+            canvas.before:
+                Rectangle:
+                    source: 'hamster.jpg'
+                    size: sp(60), sp(60)
+                    pos: int(self.center_x - sp(11)), int(self.center_y - sp(11))
+        
+        Label :
+            text : "Lovebirds"
+            font_size : 30
+            color : 0,0,0,1
+
+        CheckBox:
+            group : "Color"
+            on_release : root.optionClicked(self, self.active, 'Cl')
+            on_release : app.root.current = 'q8'
+            canvas.before:
+                Rectangle:
+                    source: 'lovebirds.jpg'
+                    size: sp(60), sp(60)
+                    pos: int(self.center_x - sp(11)), int(self.center_y - sp(11))
+              
+
+        
+        Label :
+            text : "Dogs"
+            font_size : 30
+            color : 0,0,0,1
+
+        CheckBox:
+            group : "Color"
+            on_release : root.optionClicked(self, self.active, 'P')
+            on_release : app.root.current = 'q8'  
+            canvas.before:
+                Rectangle:
+                    source: 'dog.jpg'
+                    size: sp(70), sp(70)
+                    pos: int(self.center_x - sp(11)), int(self.center_y - sp(11))
+<q8>
+    name : 'q8'
+    canvas.before :
+        Rectangle :
+            size : self.size
+        Color :
+            rgba : 0,255,255,0.2
+    
+    GridLayout :
+        cols : 2
+        size : root.width, root.height
+
+        Label :
+            text : "   Which quote do you like the most?"
+            font_size : 28
+            color : 0,0,0,1
+        
+        Label :
+            text : ' '
+        
+        Label :
+            text : "    Your last English paper came back with a Garfield sticker on it. "
+            font_size : 28
+            color : 0,0,0,1
+        
+                    
+        CheckBox:
+            group : "Color"
+            on_release : root.optionClicked(self, self.active, 'A')
+            on_release : app.root.current = 'q9'
+            color : 0,0,0,1
+            
+        
+        Label :
+            text : "I might be a coach, but I like to travel first class."
+            font_size : 28
+            color : 0,0,0,1
+
+        CheckBox:
+            group : "Color"
+            on_release : root.optionClicked(self, self.active, 'Cam')
+            on_release : app.root.current = 'q9'
+            color : 0,0,0,1
+
+        
+        Label :
+            text : "Be the wind in his back, not the spit in his face."
+            font_size : 28
+            color : 0,0,0,1
+
+        CheckBox:
+            group : "Color"
+            on_release : root.optionClicked(self, self.active, 'G')
+            on_release : app.root.current = 'q9'
+            color : 0,0,0,1
+        Label :
+            text : "You'll never go broke playing to a rich man's ego."
+            font_size : 28
+            color : 0,0,0,1
+
+        CheckBox:
+            group : "Color"
+            on_release : root.optionClicked(self, self.active, 'M')
+            on_release : app.root.current = 'q9'
+            color : 0,0,0,1
+        Label :
+            text : "      I'd love to be wrong, but I don't live with the right people for that."
+            font_size : 28
+            color : 0,0,0,1
+
+        CheckBox:
+            group : "Color"
+            on_release : root.optionClicked(self, self.active, 'Cl')
+            on_release : app.root.current = 'q9'
+            color : 0,0,0,1
+
+        
+        Label :
+            text : "If you love something, set it free, unless it's a tiger."
+            font_size : 28
+            color : 0,0,0,1
+
+        CheckBox:
+            group : "Color"
+            on_release : root.optionClicked(self, self.active, 'P')
+            on_release : app.root.current = 'q9'  
+            color : 0,0,0,1
+<q9>
+    name : 'q9'
+    canvas.before :
+        Rectangle :
+            size : self.size
+        Color :
+            rgba : 0,255,255,0.2
+    
+    GridLayout :
+        cols : 2
+        size : root.width, root.height
+
+        Label :
+            text : "   What is your favorite accessory?"
+            font_size : 28
+            color : 0,0,0,1
+        
+        Label :
+            text : ' '
+        
+        Label :
+            text : "Spectacles"
+            font_size : 28
+            color : 0,0,0,1
+        
+                    
+        CheckBox:
+            group : "Color"
+            on_release : root.optionClicked(self, self.active, 'A')
+            on_release : app.root.current = 'q10'
+            canvas.before:
+                Rectangle:
+                    source: 'spectacles.jpg'
+                    size: sp(60), sp(60)
+                    pos: int(self.center_x - sp(11)), int(self.center_y - sp(11))
+        
+        Label :
+            text : "Floral-cuffed shirts"
+            font_size : 28
+            color : 0,0,0,1
+
+        CheckBox:
+            group : "Color"
+            on_release : root.optionClicked(self, self.active, 'Cam')
+            on_release : app.root.current = 'q10'
+            canvas.before:
+                Rectangle:
+                    source: 'floral.jpg'
+                    size: sp(60), sp(60)
+                    pos: int(self.center_x - sp(11)), int(self.center_y - sp(11))
+            
+
+        
+        Label :
+            text : "Diamond necklace"
+            font_size : 28
+            color : 0,0,0,1
+
+        CheckBox:
+            group : "Color"
+            on_release : root.optionClicked(self, self.active, 'G')
+            on_release : app.root.current = 'q10'
+            canvas.before:
+                Rectangle:
+                    source: 'diamond.jpg'
+                    size: sp(60), sp(60)
+                    pos: int(self.center_x - sp(11)), int(self.center_y - sp(11))
+        
+        Label :
+            text : "Hats"
+            font_size : 28
+            color : 0,0,0,1
+
+        CheckBox:
+            group : "Color"
+            on_release : root.optionClicked(self, self.active, 'M')
+            on_release : app.root.current = 'q10'
+            canvas.before:
+                Rectangle:
+                    source: 'hat.jpg'
+                    size: sp(60), sp(60)
+                    pos: int(self.center_x - sp(11)), int(self.center_y - sp(11))
+        
+        Label :
+            text : "Ear studs"
+            font_size : 28
+            color : 0,0,0,1
+
+        CheckBox:
+            group : "Color"
+            on_release : root.optionClicked(self, self.active, 'Cl')
+            on_release : app.root.current = 'q10'
+            canvas.before:
+                Rectangle:
+                    source: 'studs.jpg'
+                    size: sp(60), sp(60)
+                    pos: int(self.center_x - sp(11)), int(self.center_y - sp(11))
+              
+
+        
+        Label :
+            text : "Boots"
+            font_size : 28
+            color : 0,0,0,1
+
+        CheckBox:
+            group : "Color"
+            on_release : root.optionClicked(self, self.active, 'P')
+            on_release : app.root.current = 'q10'  
+            canvas.before:
+                Rectangle:
+                    source: 'boots.jpg'
+                    size: sp(70), sp(70)
+                    pos: int(self.center_x - sp(11)), int(self.center_y - sp(11))
+<q10>
+    name : 'q10'
+    canvas.before :
+        Rectangle :
+            size : self.size
+        Color :
+            rgba : 0,255,255,0.2
+    
+    GridLayout :
+        cols : 2
+        size : root.width, root.height
+
+        Label :
+            text : "What is your favourite dessert?"
+            font_size : 28
+            color : 0,0,0,1
+        
+        Label :
+            text : ' '
+        
+        Label :
+            text : "Creme Brulee"
+            font_size : 28
+            color : 0,0,0,1
+        
+                    
+        CheckBox:
+            group : "Color"
+            on_release : root.optionClicked(self, self.active, 'A')
+            on_release : app.root.current = 'calculating'
+            canvas.before:
+                Rectangle:
+                    source: 'creme.jpg'
+                    size: sp(60), sp(60)
+                    pos: int(self.center_x - sp(11)), int(self.center_y - sp(11))
+        
+        Label :
+            text : "Cherry Pie"
+            font_size : 28
+            color : 0,0,0,1
+
+        CheckBox:
+            group : "Color"
+            on_release : root.optionClicked(self, self.active, 'Cam')
+            on_release : app.root.current = 'calculating'
+            canvas.before:
+                Rectangle:
+                    source: 'pie.jpg'
+                    size: sp(60), sp(60)
+                    pos: int(self.center_x - sp(11)), int(self.center_y - sp(11))
+            
+
+        
+        Label :
+            text : "Tres Leches"
+            font_size : 28
+            color : 0,0,0,1
+
+        CheckBox:
+            group : "Color"
+            on_release : root.optionClicked(self, self.active, 'G')
+            on_release : app.root.current = 'calculating'
+            canvas.before:
+                Rectangle:
+                    source: 'tl.jpg'
+                    size: sp(60), sp(60)
+                    pos: int(self.center_x - sp(11)), int(self.center_y - sp(11))
+        
+        Label :
+            text : "Macarons"
+            font_size : 28
+            color : 0,0,0,1
+
+        CheckBox:
+            group : "Color"
+            on_release : root.optionClicked(self, self.active, 'M')
+            on_release : app.root.current = 'calculating'
+            canvas.before:
+                Rectangle:
+                    source: 'macarons.jpg'
+                    size: sp(60), sp(60)
+                    pos: int(self.center_x - sp(11)), int(self.center_y - sp(11))
+        
+        Label :
+            text : "Ice Cream Sundae"
+            font_size : 28
+            color : 0,0,0,1
+
+        CheckBox:
+            group : "Color"
+            on_release : root.optionClicked(self, self.active, 'Cl')
+            on_release : app.root.current = 'calculating'
+            canvas.before:
+                Rectangle:
+                    source: 'sundae.jpg'
+                    size: sp(60), sp(60)
+                    pos: int(self.center_x - sp(11)), int(self.center_y - sp(11))
+              
+
+        
+        Label :
+            text : "Cookies"
+            font_size : 28
+            color : 0,0,0,1
+
+        CheckBox:
+            group : "Color"
+            on_release : root.optionClicked(self, self.active, 'P')
+            on_release : app.root.current = 'calculating'  
+            canvas.before:
+                Rectangle:
+                    source: 'cookies.jpg'
                     size: sp(70), sp(70)
                     pos: int(self.center_x - sp(11)), int(self.center_y - sp(11))
 
